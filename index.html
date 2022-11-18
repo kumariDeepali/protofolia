@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+<div id="header">
+    <div class="container">
+        <nav>
+            <!-- <img src="img/images/logo.png" class="logo"> -->
+            <h1 class="logo">Indra's World</h1>
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Backend Developer</p>
+            <h1>Hi i'm <span>Deepali Singh</span><br> ex-Google</h1>
+        </div>
+    </div>
+</div>
+
+
+<!-- about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-cal-1">
+                <img src="img/images/linkedin_profile-removebg-preview.png" alt="">
+            </div>
+            <div class="about-cal-2">
+                <h1 class="sub-title">About me</h1>
+                <p>Hi i'm Deepali Singh ,i'm Backend developer i have lots of experience on working different projects i love problem solving and logical task i learned skill on my own  thats it about my self thanks for reaching me out <h2>click  below to  know about me</h2> </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skilles')">Skilles</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experince</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-containts active-tab" id="skilles">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designin web interfaces</li>
+                        <li><span>FrontEnd</span><br>React</li>
+                        <li><span>Backend</span><br>Nodejs</li>
+                    </ul>
+                </div>
+                <div class="tab-containts" id="experience">
+                    <ul>
+                        <li><span>Software engineer</span><br>10 Year</li>
+                        <li><span>FrontEnd engineer</span><br>0.6year</li>
+                        <li><span>Backend engineer</span><br>9year</li>
+                    </ul>
+                </div>
+                <div class="tab-containts" id="education">
+                    <ul>
+                        <li><span>Btech</span><br>2021</li>
+                        <li><span>12</span><br>2017</li>
+                        <li><span>10</span><br>2015</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontains = document.getElementsByClassName("tab-containts");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontain of tabcontains){
+            tabcontain.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
